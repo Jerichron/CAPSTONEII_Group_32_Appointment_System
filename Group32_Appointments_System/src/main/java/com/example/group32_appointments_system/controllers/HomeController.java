@@ -18,29 +18,57 @@ public class HomeController {
 
     @RequestMapping("/admin")
     public String admin(){
-        return "admin";
+        return "admin/admin";
     }
 
     @RequestMapping("/book")
     public String book(){
-        return "book";
+        return "client/book";
     }
 
     @RequestMapping("/bookconfirmation")
     public String bookConfirmation(){
-        return "bookConfirmation";
+        return "client/bookConfirmation";
     }
 
-    @RequestMapping("/appointmentsAdmin")
-    public String appointmentsAdmin(){
-        return "appointmentsAdmin";
+    @RequestMapping("/adminAppt")
+    public String adminAppt(){
+        return "admin/adminAppt";
     }
 
     @RequestMapping("/addClient")
     public String addClient(){
-        return "addClient";
+        return "admin/addClient";
     }
 
+    @RequestMapping("/adminClientInfo")
+    public String adminClientInfo(){
+        return "admin/adminClientInfo";
+    }
 
+    @RequestMapping("/adminClientList")
+    public String adminClientList(){
+        return "admin/adminClientList";
+    }
+
+    @RequestMapping("/lawyer")
+    public String lawyer(){
+        return "lawyer/lawyer";
+    }
+
+    @RequestMapping("/lawyerAppt")
+    public String lawyerAppt(){
+        return "lawyer/lawyerAppt";
+    }
+
+    @RequestMapping("/lawyerClientInfo")
+    public String lawyerClientInfo(){
+        return "lawyer/lawyerClientInfo";
+    }
+
+    @RequestMapping("/lawyerClientList")
+    public String lawyerClientList(){
+        return "lawyer/lawyerClientList";
+    }
 
 }
