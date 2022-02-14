@@ -1,4 +1,4 @@
-package com.example.group32_appointments_system.services;
+package com.example.group32_appointments_system.service;
 
 import java.util.List;
 import org.springframework.security.core.userdetails.UserDetailsService;

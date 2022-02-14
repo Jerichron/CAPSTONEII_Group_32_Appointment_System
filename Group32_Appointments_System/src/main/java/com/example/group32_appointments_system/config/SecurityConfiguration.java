@@ -1,6 +1,6 @@
 package com.example.group32_appointments_system.config;
 
-import com.example.group32_appointments_system.services.UserService;
+import com.example.group32_appointments_system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

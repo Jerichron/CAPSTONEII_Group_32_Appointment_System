@@ -1,7 +1,7 @@
 package com.example.group32_appointments_system.controllers;
 
 import com.example.group32_appointments_system.dto.UserRegistrationDto;
-import com.example.group32_appointments_system.services.UserService;
+import com.example.group32_appointments_system.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/registration")
-public class RegistrationController {
+public class UserRegistrationController {
 
     private UserService userService;
 
-    public RegistrationController(UserService userService) {
+    public UserRegistrationController(UserService userService) {
         super();
         this.userService = userService;
     }

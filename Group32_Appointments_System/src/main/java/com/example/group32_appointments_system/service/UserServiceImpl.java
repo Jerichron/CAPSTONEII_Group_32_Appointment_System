@@ -1,10 +1,9 @@
-package com.example.group32_appointments_system.services;
+package com.example.group32_appointments_system.service;
 
 import com.example.group32_appointments_system.dto.UserRegistrationDto;
 import com.example.group32_appointments_system.model.User;
 import com.example.group32_appointments_system.model.Role;
 import com.example.group32_appointments_system.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
