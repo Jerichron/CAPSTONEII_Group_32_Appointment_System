@@ -1,10 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head th:fragment="headCust">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Van Dyke Law - Injury Lawyer | Kingston, Ottawa, Belleville</title>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5SDKR3"></script>
+    <script>
+        let pathInfo;
+        pathInfo = {
+            base: 'https://www.vandykelaw.ca/wp-content/themes/vandyke/',
+            css: 'css/',
+            js: 'js/',
+            swf: 'swf/',
+        };</script>
+    <link href=/templates/images/vandykelogo rel="shortcut icon" type=image/vnd.microsoft.icon>
+    <meta name="google-site-verification" content="Srnb4jH9iPl115a2TkqIcFGH4AJ4B39wzvAhD7r_kzg">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
+    <title>Van Dyke Law - Injury Lawyer | Kingston, Ottawa, Belleville</title>
+    <meta name="description" content="Van Dyke Law acts for individuals who have been injured throughout Southern Ontario, including Kingston, Ottawa, Belleville.">
+    <link rel=canonical href=https://www.vandykelaw.ca/>
+    <meta name="twitter:label1" content="Est. reading time">
+    <meta name="twitter:data1" content="1 minute">
+    <script type=application/ld+json class=yoast-schema-graph>
+        {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.vandykelaw.ca/#website",
+            "url":"https://www.vandykelaw.ca/","name":"Van Dyke Law","description":"Van Dyke Law","potentialAction":
+            [{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.vandykelaw.ca/?s={search_term_string}"},
+                "query-input":"required name=search_term_string"}],"inLanguage":"en-CA"},{"@type":"WebPage","@id":"https://www.vandykelaw.ca/#webpage",
+            "url":"https://www.vandykelaw.ca/","name":"Van Dyke Law - Injury Lawyer | Kingston, Ottawa, Belleville","isPartOf":
+            {"@id":"https://www.vandykelaw.ca/#website"},"datePublished":"2015-08-14T17:42:46+00:00","dateModified":"2020-05-19T19:38:30+00:00",
+            "description":"Van Dyke Law acts for individuals who have been injured throughout Southern Ontario, including Kingston, Ottawa, Belleville.",
+            "breadcrumb":{"@id":"https://www.vandykelaw.ca/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https://www.vandykelaw.ca/"]}]},
+            {"@type":"BreadcrumbList","@id":"https://www.vandykelaw.ca/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+    <link rel=dns-prefetch href=//secure.gravatar.com>
+    <link rel=dns-prefetch href=//fonts.googleapis.com>
+    <link rel=dns-prefetch href=//s.w.org>
+    <link rel=dns-prefetch href=//v0.wordpress.com>
+    <link rel=alternate type=application/rss+xml title="Van Dyke Law &raquo; Feed" href=https://www.vandykelaw.ca/feed/>
+    <link rel=alternate type=application/rss+xml title="Van Dyke Law &raquo; Comments Feed" href=https://www.vandykelaw.ca/comments/feed/>
+    <link rel=alternate type=application/rss+xml title="Van Dyke Law &raquo; Home Comments Feed" href=https://www.vandykelaw.ca/home/feed/>
+
+    <link rel=stylesheet id=wp-block-library-css href='https://www.vandykelaw.ca/wp-includes/css/dist/block-library/style.min.css?ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=mediaelement-css href='https://www.vandykelaw.ca/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type=text/css media=all>
+    <link rel=stylesheet id=wp-mediaelement-css href='https://www.vandykelaw.ca/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=wp-pagenavi-css href='https://www.vandykelaw.ca/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type=text/css media=all>
+    <link rel=stylesheet id=base-style-css href='https://www.vandykelaw.ca/wp-content/themes/vandyke/style.css?ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=base-font1-css href='https://fonts.googleapis.com/css?family=Lato%3A400%2C700&#038;ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=base-font2-css href='https://fonts.googleapis.com/css?family=Open+Sans&#038;ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=base-font3-css href='https://fonts.googleapis.com/css?family=EB+Garamond&#038;ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=base-theme-css href='https://www.vandykelaw.ca/wp-content/themes/vandyke/theme.css?ver=4af9bd255e1b1e32f5797032899391a9' type=text/css media=all>
+    <link rel=stylesheet id=social-logos-css href='https://www.vandykelaw.ca/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=10.4' type=text/css media=all>
+    <link rel=stylesheet id=jetpack_css-css href='https://www.vandykelaw.ca/wp-content/plugins/jetpack/css/jetpack.css?ver=10.4' type=text/css media=all>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src='https://www.vandykelaw.ca/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id=jquery-core-js></script>
+    <script src='https://www.vandykelaw.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id=jquery-migrate-js></script>
+    <link rel=https://api.w.org/ href=https://www.vandykelaw.ca/wp-json/>
+    <link rel=alternate type=application/json href=https://www.vandykelaw.ca/wp-json/wp/v2/pages/162>
+    <link rel=EditURI type=application/rsd+xml title=RSD href=https://www.vandykelaw.ca/xmlrpc.php?rsd>
+    <link rel=wlwmanifest type=application/wlwmanifest+xml href=https://www.vandykelaw.ca/wp-includes/wlwmanifest.xml>
+    <link rel=shortlink href=https://wp.me/P6Iaet-2C>
+    <link rel=alternate type=application/json+oembed href="https://www.vandykelaw.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vandykelaw.ca%2F">
+    <link rel=alternate type=text/xml+oembed href="https://www.vandykelaw.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vandykelaw.ca%2F&#038;format=xml">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Van Dyke Law">
+    <meta property="og:description" content="Van Dyke Law">
+    <meta property="og:url" content="https://www.vandykelaw.ca/">
+    <meta property="og:site_name" content="Van Dyke Law">
+    <meta property="og:image" content="https://www.vandykelaw.ca/wp-content/uploads/2018/11/socialshare2018.png">
+    <meta property="og:image:alt" content="">
+    <meta name="twitter:text:title" content="Home">
+    <meta name="twitter:card" content="summary">
+
+    <style>
+        div.page-title{
+            border-bottom: 1px solid #b9b5b5;
+            padding: 1em;
+            margin-bottom: 2em;
+        }
+
+        input[type="search"]{
+            background: #fff;
+            margin: 0;
+            -webkit-appearance: none;
+            -webkit-border-radius: 10px;
+            border: 1px solid #b9b5b5;
+            padding: 1px 7px;
+            font-size: 14px;
+            height: 3em;
+            color: black;
+            width: 20em;
+
+        }
+        div .clientList .row{
+            border-bottom: 1px solid #b9b5b5;
+            background-color: #D19444;
+            color: white;
+        }
+
+        div.clientList{
+            border: 1px solid #b9b5b5;
+            margin-bottom: 2em;
+
+        }
+
+
+
+    </style>
 </head>
 <body>
+<noscript>&lt;iframe
+    src="//www.googletagmanager.com/ns.html?id=GTM-5SDKR3"
+    height=0 width=0 style=display:none;visibility:hidden&gt;&lt;/iframe&gt;</noscript>
+<script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        const f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5SDKR3');
+</script>
+<div id=wrapper>
+    <header id=header th:fragment="header">
+        <div class=info-bar>
+            <div class=container>
+                <div class=row style=margin-bottom:0;>
+                    <div class=col-sm-6>
+                        <div class=phone-holder-XXX style="text-align: left;">
+                            <strong class=phone>
+                                Toll Free:
+                                <a href=tel:18882170183>1-888-217-0183</a>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class=col-sm-6>
+                        <div class=social-holder>
+                            <ul class=social-networks>
+                                <li>
+                                    <a href=https://twitter.com/vandykelaw class=icon-twitter></a>
+                                </li>
+                                <li>
+                                    <a href=https://www.facebook.com/vandykelaw class=icon-facebook></a>
+                                </li>
+                                <li>
+                                    <a href=https://www.linkedin.com/pub/frank-van-dyke/51/625/692 class=icon-linkedin></a>
+                                </li>
+                                <li>
+                                    <a href=https://www.youtube.com/user/vandykelaw/ class=icon-youtube></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=locator-bar>
 
+            Directions:
+            <a href=https://www.google.ca/maps/dir//1473+John+Counter+Blvd+Kingston+ON+K7M+8Z6>Kingston</a>
+            <a href=https://www.google.ca/maps/dir//130+Slater+St.+Ottawa+ON+K1P+6E2>Ottawa</a>
+            <a href=https://www.google.ca/maps/dir//199+Front+St.+Belleville+ON+K8N+5H5>Belleville</a>
+        </div>
+        <div class=logo-bar>
+            <div class=container>
+                <div class=logo>
+                    <a href=https://www.vandykelaw.ca>
+                        <img src=https://www.vandykelaw.ca/wp-content/themes/vandyke/images/logo.png height=132 width=780 alt="Van Dyke Law">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class=nav-bar>
+            <div class=container>
+                <a href=# class=nav-opener>
+                    <span></span>
+                </a>
+                <nav id=main-nav>
+                    <ul>
+                        <li id=menu-item-177 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home active page_item page-item-162 current_page_item menu-item-177">
+                            <a href=#>Home</a>
+                        </li>
+                        <li id=menu-item-214 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-214">
+                            <a href=#>Appointments</a>
+                        </li>
+                        <li id=menu-item-203 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-203">
+                            <a href=#>Clients</a>
+                        </li>
+                        <li id=menu-item-285 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-220">
+                            <a href=/templates/index.html th:href="@{/}">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id=main role=main>
+        <div class="container">
+            <div class="page-title">
+                <h1>Clients</h1>
+                <input type="search" id="searchClient" class="form-control justify-content-end" placeholder="Search client..." aria-label="Search" />
+            </div>
+            <div id="clientList" class="clientList">
+                <!--do code for calendar here-->
+                <div class="row text-center ">
+                    <div class="col">Client</div>
+                    <div class="col">Case #</div>
+                    <div class="col">Address</div>
+                    <div class="col">Email</div>
+                    <div class="col">Phone</div>
+                </div>
+                ***List of clients goes here
+            </div>
+            <div>
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+        </div>
+    </main>
+    <footer id=footer>
+        <div class=main-bar>
+            <div class=container>
+                <div class=footer-row>
+                    <div class=footer-logo>
+                        <a href=https://www.vandykelaw.ca>
+                            <img src=https://www.vandykelaw.ca/wp-content/themes/vandyke/images/logo.png height=92 width=456 alt="Van Dyke Law">
+                        </a>
+                    </div>
+                    <div class=phone-holder>
+                        <strong class=phone>
+                            Toll Free:
+                            <a href=tel:18882170183>1-888-217-0183</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="footer-row contact-row">
+                    <div class=footer-section>
+                        <h4>Kingston Office</h4>
+                        <address>
+
+                            City Place II
+                            <br>
+
+                            Suite 104 - 1473 John Counter Blvd.
+                            <br>
+
+                            Kingston, ON
+                            <span class=index>K7M 8Z6</span>
+                            <br>
+
+                            Tel:
+                            <a href=tel:6135441206>613-544-1206</a>
+                        </address>
+                    </div>
+                    <div class=footer-section>
+                        <h4>Ottawa Office</h4>
+                        <address>
+
+                            1000 Innovation Drive, Suite 500
+                            <br>
+
+                            Ottawa, ON
+                            <span class=index>K2K 3E7</span>
+                            <br>
+
+                            Tel:
+                            <a href=tel:6135928500>613-592-8500</a>
+                        </address>
+                    </div>
+                    <div class=footer-section>
+                        <h4>Belleville Office</h4>
+                        <address>
+
+                            1 Bridge Street East, Suite 300
+                            <br>
+
+                            Belleville, ON
+                            <span class=index>K8N 5N9</span>
+                            <br>
+
+                            Tel:
+                            <a href="tel:6139669060 ">613-966-9060 </a>
+                        </address>
+                    </div>
+                </div>
+                <div class=footer-row>
+                    <div class=footer-section>
+                        <address>Fax: 613-544-2552</address>
+                        <a class=email>&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#117;&#115;&#064;&#118;&#097;&#110;&#100;&#121;&#107;&#101;&#108;&#097;&#119;&#046;&#099;&#097;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=info-bar>
+            <div class=container>
+                <p class=copyright>Copyright © 2020 Van Dyke Law, all rights reserved.</p>
+                <div class=footer-nav-holder>
+                    <ul>
+                        <li>
+                            <!--                            <a href=/disclaimer/>Disclaimer</a>-->
+                            <a>Disclaimer</a>
+                        </li>
+                        <li>
+                            <!--                            <a href=/privacy/>Privacy</a>-->
+                            <a>Privacy</a>
+                        </li>
+                        <li>
+                            <!--                            <a href=/site-map/>Site Map</a>-->
+                            <a>Site Map</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
+<script>
+    jQuery(function() {
+        jQuery('.nav-tabs a').click(function(e) {
+            e.preventDefault();
+            jQuery(this).tab('show');
+        })
+    });
+</script>
+<script src='https://www.vandykelaw.ca/wp-content/themes/vandyke/js/jquery.main.js?ver=4af9bd255e1b1e32f5797032899391a9' id=base-script-js></script>
+<script src='https://www.vandykelaw.ca/wp-includes/js/wp-embed.min.js?ver=4af9bd255e1b1e32f5797032899391a9' id=wp-embed-js></script>
 </body>
 </html>
